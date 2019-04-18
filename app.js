@@ -18,12 +18,17 @@ app.use((req,res,next) => {
   });
 
   app.get("/",( req, res) => {
-     request('https://www.lrt.lt/mediateka/tiesiogiai/lrt-televizija', (err, res, html) => {
-        if (!err && res.statusCode == 200) {
+      let title;
+        request('https://www.lrt.lt/mediateka/tiesiogiai/lrt-televizija', (err, res, html) => {
+        if (!err) {
             const $ = cheerio.load(html);
-            console.log($('html'))
+            title = $('.channel-item__title');
+            console.log(title.text)
         }
-     })
+     });
+     res.send(
+        title
+     )
   });
 
  
