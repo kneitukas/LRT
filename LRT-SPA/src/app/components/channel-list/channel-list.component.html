@@ -1,0 +1,20 @@
+<h1 class='m-3'>Tiesiogiai</h1>
+<div class="container">
+
+  <div class="card m-2" *ngFor='let item of channels; let i = index'>
+    <div class="card-header">
+          <img src="../../../assets/{{item.name}}.png" alt="" class='mr-2'>
+        {{item.name}}
+        <p class="card-text">{{item.date}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+
+    </div>
+    <div class="card-footer">
+
+        <a href="https://lrt.lt/{{item.url}}" target="_blank" class="btn btn-primary">Žiūrėti</a>
+    </div>
+  </div>
+</div>
+
