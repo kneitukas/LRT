@@ -4,6 +4,8 @@
 *This project was built using Angular 7 as a client and Node as API.
 Involves web scraping and reactive extensions.*
 
+---------------------------------------------------------------------------
+
 *Deployed on AWS (separately).*
 
 * *Client on S3*
