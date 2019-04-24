@@ -1,7 +1,7 @@
 # LRT
 [Project URL](http://lrt-angular-node.s3-website.eu-central-1.amazonaws.com/)
 
-*This project was built with Angular 7 as a client and Node as API.
+*This project was built using Angular 7 as a client and Node as API.
 Involves web scraping and reactive extensions.*
 
 *Deployed on AWS (separately).*
@@ -10,7 +10,6 @@ Involves web scraping and reactive extensions.*
 
 * *Server on Elastic Beanstalk*
 
-* *Angular 7*
 
 
 
