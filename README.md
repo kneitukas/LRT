@@ -1,4 +1,4 @@
-# LRT
+# LRT Live Channels
 [Project URL](http://lrt-angular-node.s3-website.eu-central-1.amazonaws.com/)
 
 *This project was built using Angular 7 as a client and Node as API.
