@@ -11,6 +11,14 @@
   width: 400px;
 }
 
+.card-title {
+  font-weight: 400;
+}
+
+.card-header {
+  font-weight: 500
+}
+
 .card-footer {
   background-color: inherit;
   border: none;
@@ -25,6 +33,5 @@ h1 {
   font-weight: 500;
   font-size: 2rem;
   text-align: center;
-  font-style: italic;
 }
 
