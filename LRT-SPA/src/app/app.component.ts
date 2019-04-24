@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit, AfterContentInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart, NavigationCancel, NavigationError } from '@angular/router';
 
 @Component({

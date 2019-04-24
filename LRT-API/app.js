@@ -29,7 +29,7 @@ app.use((req,res,next) => {
             .find('.channel-item__title')
             .text();
 
-            obj.date = $(el)
+            obj.time = $(el)
             .find('.data-block__text')
             .text();
 
@@ -42,10 +42,8 @@ app.use((req,res,next) => {
             result.push(obj);  
           });
           res.send(result)
-          console.log(result)
       }
    })
   });
-
 
   module.exports = app;

@@ -1,32 +1,28 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { ApiService } from "src/app/services/api.service";
 
 @Component({
-  selector: 'app-channel-list',
-  templateUrl: './channel-list.component.html',
-  styleUrls: ['./channel-list.component.scss'],
-
+  selector: "app-channel-list",
+  templateUrl: "./channel-list.component.html",
+  styleUrls: ["./channel-list.component.scss"]
 })
-export class ChannelListComponent implements OnInit, AfterViewInit {
+export class ChannelListComponent implements OnInit {
   channels;
-  logos = [
-    "lrt-televizija.png",
-    "lrt-plius.png",
-    "lrt-lituanica.png",
-    "lrt-radijas.png",
-    "lrt-klasika.png",
-    "lrt-opus.png",
-  ]
-  constructor (private router: ActivatedRoute) {}
+
+  constructor(private router: ActivatedRoute, private api: ApiService) {}
 
   ngOnInit() {
-    this.router.data.subscribe(
-      data => {
-    this.channels = data.channels;
-      }
-    )
+    this.router.data.subscribe(data => {
+      this.channels = data.channels;
+      // fetching data from api every minute
+      setInterval(() => this.fetchData(), 1000 * 60);
+    });
   }
 
-  ngAfterViewInit () {
+  fetchData() {
+    this.api.getChannels().subscribe(data => {
+      this.channels = data;
+    });
   }
 }
