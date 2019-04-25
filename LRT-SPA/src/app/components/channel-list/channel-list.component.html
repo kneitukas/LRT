@@ -1,10 +1,10 @@
-<h1 class='m-3'>Tiesiogiai</h1>
+<h1 class='m-3'>Tiesiogiai per LRT</h1>
 <div class="container">
 
   <div class="card m-2" *ngFor='let item of channels; let i = index'>
     <div class="card-header">
           <img src="../../../assets/{{item.name}}.png" alt="" class='mr-2'>
-        {{item.name}}
+        {{item.name | uppercase}}
         <p class="card-text">{{item.time}}</p>
     </div>
     <div class="card-body">
