@@ -8,6 +8,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getChannels() {
+    console.log(this.url)
     return this.http.get(this.url);
   }
 }

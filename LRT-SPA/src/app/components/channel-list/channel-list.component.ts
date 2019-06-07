@@ -23,6 +23,8 @@ export class ChannelListComponent implements OnInit {
   fetchData() {
     this.api.getChannels().subscribe(data => {
       this.channels = data;
-    });
+    },
+
+    (err) => console.log(err));
   }
 }
