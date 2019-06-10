@@ -5,22 +5,36 @@
           "name": "Kasmetinių atostogų prašymas",
           "fields": [
             {
-              "fieldName": "date",
-              "defaultValue": "2018.11.04",
-              "isRequired": "true",
-              "isAdmin": false
+              "key": "date",
+              "label": "Atostogu pradzia",
+              "value": "2018-11-04",
+              "isRequired": true,
+              "isAdmin": false,
+              "controlType": "date" 
             },
             {
-              "fieldName": "confirmingPerson",
-              "defaultValue": "Darius Kirna",
-              "isRequired": "true",
-              "isAdmin": true 
+              "key": "dateEnd",
+              "label": "Atostogu pabaiga",
+              "value": "",
+              "isRequired": true, 
+              "isAdmin": false,
+              "controlType": "date"
             },
             {
-              "fieldName": "comment",
-              "defaultValue": "",
-              "isRequired": "false",
-              "isAdmin": true
+              "key": "confirmingPerson",
+              "label": "Tvirtinantis asmuo",
+              "value": "Darius Kirna",
+              "isRequired": true,
+              "isAdmin": true,
+              "controlType": "chip"
+            },
+            {
+              "key": "comment",
+              "label": "Komentaras",
+              "value": "",
+              "isRequired": false,
+              "isAdmin": true,
+              "controlType": "textbox"
             }
           ]
         },
@@ -28,16 +42,29 @@
           "name": "Papildomos dienos prašymas",
           "fields": [
             {
-              "fieldName": "date",
-              "defaultValue": "2018.11.04",
-              "isRequired": "true",
-              "isAdmin": true
+              "key": "date",
+              "label": "Atostogu pradzia",
+              "value": "2018-11-04",
+              "isRequired": true,
+              "isAdmin": true,
+              "controlType": "date"
             },
             {
-              "fieldName": "confirmingPerson",
-              "defaultValue": "Nerijus Jankauskas",
-              "isRequired": "true",
-              "isAdmin": false
+                "key": "dateEnd",
+                "label": "Atostogu pabaiga",
+                "value": "",
+                "isRequired": true,
+                "isAdmin": false,
+                "controlType": "date"
+              },
+            {
+              "key": "confirmingPerson",
+              "label": "Tvirtinantis",
+              "value": "Nerijus Jankauskas", 
+              "isRequired": true,
+              "isAdmin": false,
+              "controlType": "chip"
+              
             }
           ]
         },
@@ -45,22 +72,42 @@
           "name": "Etato keitimo prašymas",
           "fields": [
             {
-              "fieldName": "date",
-              "defaultValue": "2018.11.04",
-              "isRequired": "true",
-              "isAdmin": true
-            }
+              "key": "date",
+              "label": "Atostogu pradzia",
+              "value": "2018-11-04",
+              "isRequired": true,
+              "isAdmin": true,
+              "controlType": "date"
+            },
+            {
+                "key": "dateEnd",
+                "label": "Atostogu pabaiga",
+                "value": "",
+                "isRequired": true,
+                "isAdmin": false,
+                "controlType": "date"
+              }
           ]
         },
         {
           "name": "Mokymosi atostogų prašymas",
           "fields": [
             {
-              "fieldName": "date",
-              "defaultValue": "2018.11.04",
-              "isRequired": "true",
-              "isAdmin": true
-            }
+              "key": "date",
+              "label": "Atostogu pradzia",
+              "value": "2018-11-04",
+              "isRequired": true,
+              "isAdmin": true,
+              "controlType": "date"
+            },
+            {
+                "key": "dateEnd",
+                "label": "Atostogu pabaiga",
+                "value": "",
+                "isRequired": true,
+                "isAdmin": false,
+                "controlType": "date"
+              }
           ]
         }
        
